@@ -158,7 +158,7 @@ namespace WebUI {
             _webserver->on("/gconnectivitycheck.gstatic.com", HTTP_ANY, handle_root);
             //do not forget the / at the end
             _webserver->on("/fwlink/", HTTP_ANY, handle_root);
-            //Added special sauce for Apple devices. They will try to connect to this URL to check if they are behind a captive portal.
+                        //Added special sauce for Apple devices. They will try to connect to this URL to check if they are behind a captive portal.
             _webserver->on("/hotspot-detect.html", HTTP_ANY, [](){
                 _webserver->send(200, "text/html", "<HTML><HEAD><TITLE>Success</TITLE></HEAD><BODY>Success</BODY></HTML>");
             });
